@@ -6,6 +6,7 @@ using Eigen::VectorXf;
 
 
 //abstract shape class
+template <class U>
 class Space
 {
 
@@ -13,10 +14,6 @@ class Space
 
     int shape;
 
-    //virtual VectorXf sample()=0;
-
-    //virtual int sample()=0;
-
-
+    virtual U sample()=0;
 
 };

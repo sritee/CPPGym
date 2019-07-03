@@ -6,7 +6,8 @@ CONFIG -= qt
 SOURCES += \
     envs/MountainCar.cpp \
     main.cpp \
-    spaces/box.cpp
+    spaces/box.cpp \
+    spaces/discrete.cpp
 
 HEADERS += \
     envs/MountainCar.h \

@@ -8,7 +8,7 @@
 using Eigen::VectorXf;
 
 
-class Box : Space
+class Box : Space<VectorXf>
 
 {
 
@@ -54,12 +54,12 @@ class Box : Space
 
    //TODO - SEEDING
 
-   VectorXf sample() override
-   {
+//   VectorXf sample() override
+//   {
 
 
 
 
 
-   }
+//   }
 };

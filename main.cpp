@@ -1,6 +1,7 @@
 
 #include "envs/MountainCar.h"
 #include "spaces/box.cpp"
+#include "spaces/discrete.cpp"
 
 #include <iostream>
 #include <string>
@@ -29,5 +30,8 @@ int main()
 //      a.resize(2);
 //      a<<1,2;
 //      cout<<a<<endl;
+
+    Discrete disc(5);
+    cout<<disc.sample()<<endl;
 
 }
