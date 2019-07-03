@@ -1,25 +1,15 @@
-#include "spaces/space.h"
-#include <Eigen/Core>
-#include <iostream>
+#include "spaces/discrete.h"
 
 
-class Discrete : Space<int>
+Discrete::Discrete(int num_values)
 {
-    public:
+    assert(num_values>0 && "positive number needed for argument");
+    n = num_values;
+}
 
-    int n;
+int Discrete::sample()
+{
+    return 2;
 
-    Discrete(int num_values)
-    {
-        assert(num_values>0 && "positive number needed");
-        n = num_values;
-    }
+}
 
-    int sample() override
-    {
-        return 1;
-
-    }
-
-
-};

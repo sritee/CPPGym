@@ -1,7 +1,7 @@
 
 #include "envs/MountainCar.h"
-#include "spaces/box.cpp"
-#include "spaces/discrete.cpp"
+#include "spaces/box.h"
+#include "spaces/discrete.h"
 
 #include <iostream>
 #include <string>

@@ -1,31 +1,7 @@
 
+#include "spaces/box.h"
 
-#include "spaces/space.h"
-#include <Eigen/Core>
-#include <iostream>
-
-
-using Eigen::VectorXf;
-
-
-class Box : Space<VectorXf>
-
-{
-
-    public:
-
-    VectorXf low; //TODO - Make them const
-    VectorXf high; //have seperate functions to call in initializer list
-
-//    There are two common use cases:
-
-//        * Identical bound for each dimension::
-//            >>> Box(num_observations, low_val=-1.0, high_val=2.0)
-
-//        * Independent bound for each dimension::
-//            >>> Box(low=[-1.0, -2.0], high=[2.0, 4.0])
-
-    Box(int num_observations, float low = -1.0, float high = 1.0)
+Box::Box(int num_observations, float low = -1.0, float high = 1.0)
 
     {
 
@@ -42,24 +18,12 @@ class Box : Space<VectorXf>
         }
     }
 
-   Box(VectorXf low, VectorXf high)
+Box::Box(VectorXf low, VectorXf high)
 
-   {
-        this->low.resize(shape);
-        this->high.resize(shape);
+{
+    this->low.resize(shape);
+    this->high.resize(shape);
 
-        this->low << low;
-        this->high << high;
-   }
-
-   //TODO - SEEDING
-
-//   VectorXf sample() override
-//   {
-
-
-
-
-
-//   }
-};
+    this->low << low;
+    this->high << high;
+}

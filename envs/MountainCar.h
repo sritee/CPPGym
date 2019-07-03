@@ -7,7 +7,7 @@
 using Eigen::VectorXf;
 using Eigen::Vector2f;
 
-class MountainCar : Env
+class MountainCar : Env<int> //action type int
 
 {
 
@@ -26,12 +26,10 @@ class MountainCar : Env
 		VectorXf reset();
         std::tuple<VectorXf,float,bool,std::string> step(const int action);
 
-		Vector2f low;
-		Vector2f high;
-
 		Vector2f state;
 
-		int num_actions;
+//        Discrete action_space;
+//        Box observation_space;
 
 
 };

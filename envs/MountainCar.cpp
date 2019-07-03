@@ -1,5 +1,6 @@
 
 #include "envs/MountainCar.h"
+#include "spaces/discrete.cpp"
 #include <string>
 #include <iostream>
 
@@ -13,13 +14,6 @@ MountainCar::MountainCar()
             max_position =  0.5;
             max_speed    =  0.07;
             goal_position=  0.5;
-
-            num_actions=5;
-
-
-            low <<-min_position,-max_speed;
-            high << max_position,max_speed;
-
 
         }
 

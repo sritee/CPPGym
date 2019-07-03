@@ -12,6 +12,8 @@ SOURCES += \
 HEADERS += \
     envs/MountainCar.h \
     core.h \
-    spaces/space.h
+    spaces/space.h \
+    spaces/box.h \
+    spaces/discrete.h
 
 INCLUDEPATH += /usr/include/eigen3/
