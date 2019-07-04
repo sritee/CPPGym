@@ -32,8 +32,8 @@ int main()
 //      cout<<a<<endl;
 
     Discrete disc(5);
-    Box box(2,-1,1);
-    cout<<box.low<<endl;
+    Box box(5,-3,1);
+    cout<<box.get_lower_bound()<<endl;
     cout<<disc.sample()<<endl;
 
 }

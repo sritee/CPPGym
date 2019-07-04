@@ -1,29 +1,35 @@
 
 #include "spaces/box.h"
 
-Box::Box(int num_observations, float low = -1.0, float high = 1.0)
+Box::Box(int num_observations, float lower_bound = -1.0, float higher_bound = 1.0)
 
     {
 
-        assert(high>low && "High must be greater than low");
+        //assert(high>low && "High must be greater than low");
         shape = num_observations;
 
-        this->low.resize(shape);
-        this->high.resize(shape);
+        low.resize(shape);
+        high.resize(shape);
 
         for(int i = 0; i < shape; i++)
         {
-            this->low(i)=low;
-            this->high(i)=high;
+            low(i)=lower_bound;
+            high(i)=higher_bound;
         }
     }
 
-Box::Box(VectorXf low, VectorXf high)
+Box::Box(VectorXf lower_bound, VectorXf higher_bound)
 
 {
-    this->low.resize(shape);
-    this->high.resize(shape);
+    low.resize(shape);
+    high.resize(shape);
 
-    this->low << low;
-    this->high << high;
+    low << lower_bound;
+    high << higher_bound;
 }
+
+
+VectorXf Box::get_lower_bound() const {return low;}
+VectorXf Box::get_upper_bound() const {return high;}
+
+VectorXf Box::sample() const {VectorXf a; a.resize(shape); return a;}

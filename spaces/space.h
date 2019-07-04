@@ -14,6 +14,6 @@ class Space
 
     int shape;
 
-    virtual U sample()=0;
+    virtual U sample() const =0;
 
 };

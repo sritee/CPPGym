@@ -14,8 +14,6 @@ class Box : Space<VectorXf>
 
     public:
 
-    VectorXf low; //TODO - Make them const
-    VectorXf high; //have seperate functions to call in initializer list
 
 //    There are two common use cases:
 
@@ -29,7 +27,18 @@ class Box : Space<VectorXf>
 
     Box(VectorXf, VectorXf);
 
+    VectorXf get_lower_bound() const; //gets lower bound of space
+
+    VectorXf get_upper_bound() const; //gets upper bound of space
+
+    VectorXf sample() const override;
+
    //TODO - SEEDING
 
    //TODO - Sampling
+
+    protected:
+
+    VectorXf low; //TODO - Make them const
+    VectorXf high; //have seperate functions to call in initializer list
 };

@@ -7,7 +7,7 @@ Discrete::Discrete(int num_values)
     n = num_values;
 }
 
-int Discrete::sample()
+int Discrete::sample() const
 {
     return 2;
 

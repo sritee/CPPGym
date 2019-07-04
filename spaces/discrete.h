@@ -12,6 +12,6 @@ class Discrete : Space<int>
 
     Discrete(int num_values);
 
-    int sample() override;
+    int sample() const override;
 
 };
