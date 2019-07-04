@@ -32,6 +32,8 @@ int main()
 //      cout<<a<<endl;
 
     Discrete disc(5);
+    Box box(2,-1,1);
+    cout<<box.low<<endl;
     cout<<disc.sample()<<endl;
 
 }
