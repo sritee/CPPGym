@@ -4,7 +4,7 @@
 #include <Eigen/Core>
 #include <iostream>
 
-class Discrete : Space<int>
+class Discrete : public Space<int>
 {
     public:
 

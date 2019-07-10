@@ -8,7 +8,7 @@
 using Eigen::VectorXf;
 
 
-class Box : Space<VectorXf>
+class Box : public Space<VectorXf>
 
 {
 

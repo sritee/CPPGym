@@ -7,7 +7,7 @@
 using Eigen::VectorXf;
 using Eigen::Vector2f;
 
-class MountainCar : Env<int> //action type int
+class MountainCar : public Env<int> //action type int
 
 {
 

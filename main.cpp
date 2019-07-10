@@ -33,7 +33,7 @@ int main()
 
     Discrete disc(5);
     Box box(5,-3,1);
-    cout<<box.get_lower_bound()<<endl;
+    cout<<box.get_upper_bound()<<endl;
     cout<<disc.sample()<<endl;
 
 }
