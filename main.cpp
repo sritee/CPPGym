@@ -1,5 +1,4 @@
 
-#include "envs/MountainCar.h"
 #include "spaces/box.h"
 #include "spaces/discrete.h"
 
@@ -7,33 +6,28 @@
 #include <string>
 #include <tuple>
 #include <Eigen/Core>
+#include "gym.h"
 
 
 using namespace std;
 
 int main()
 {
-//    MountainCar b;
+    //MountainCar b;
 
-//    b.reset();
+    //b.reset();
 
-//    cout<<b.get_state()<<endl;
-//    b.step(1)
+//    Discrete disc(5);
+//    Box box(2,3,7);
+//    cout<<box.get_upper_bound()<<endl;
+//    cout<<disc.sample()<<endl;
 
-//      Box box(6,1,1);
+      Env* env = gym::make("Mo");
 
-//      cout<<box.low<<endl;
+      env->reset();
 
-//    cout<<a();
+      env->step(1);
 
-//      Eigen::VectorXf a;
-//      a.resize(2);
-//      a<<1,2;
-//      cout<<a<<endl;
-
-    Discrete disc(5);
-    Box box(5,-3,1);
-    cout<<box.get_upper_bound()<<endl;
-    cout<<disc.sample()<<endl;
+      return 0;
 
 }

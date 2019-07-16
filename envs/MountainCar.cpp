@@ -19,10 +19,8 @@ MountainCar::MountainCar()
 
     VectorXf MountainCar::reset()
     {
-
-
         state <<0,0;
-
+        cout<<"Mountain Car initialized";
         return state;
 
     }
@@ -42,7 +40,6 @@ MountainCar::MountainCar()
         float x_pos = state(1);
 
         x_velocity+=cos(3*x_pos)*-0.0025;
-
 
         switch(action)
 

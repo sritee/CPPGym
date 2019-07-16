@@ -7,7 +7,7 @@
 using Eigen::VectorXf;
 using Eigen::Vector2f;
 
-class MountainCar : public Env<int> //action type int
+class MountainCar : public Env_Helper<int> //integer action space, inherit from that
 
 {
 
@@ -23,8 +23,8 @@ class MountainCar : public Env<int> //action type int
 		MountainCar();
 		VectorXf get_state();
 
-		VectorXf reset();
-        std::tuple<VectorXf,float,bool,std::string> step(const int action);
+        VectorXf reset() override;
+        std::tuple<VectorXf,float,bool,std::string> step(const int action) override;
 
 		Vector2f state;
 
