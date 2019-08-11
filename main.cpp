@@ -22,11 +22,12 @@ int main()
 //    cout<<box.get_upper_bound()<<endl;
 //    cout<<disc.sample()<<endl;
 
-      Env* env = gym::make("Mo");
+      auto env = gym::make("MountainCar1");
 
       env->reset();
 
       env->step(1);
+      env->step(2);
 
       return 0;
 

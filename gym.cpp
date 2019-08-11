@@ -2,9 +2,10 @@
 #include <iostream>
 #include <stdexcept>
 
-template<typename T> Env* createInstance() { return new T;}
+template<typename T>
+std::unique_ptr<Env> createInstance() { return std::unique_ptr<Env>(new T);}
 
-Env* gym::make(const std::string env_name)
+std::unique_ptr<Env> gym::make(const std::string& env_name)
 
 {
      if(environment_list.count(env_name)>0)
@@ -21,4 +22,4 @@ Env* gym::make(const std::string env_name)
 
 }
 
-registry gym::environment_list = {{"Mo",&createInstance<MountainCar>}};
+registry gym::environment_list = {{"MountainCar1",&createInstance<MountainCar>}};
