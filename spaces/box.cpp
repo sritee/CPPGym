@@ -1,5 +1,6 @@
 
 #include "spaces/box.h"
+using namespace cppgym;
 
 Box::Box(int num_observations, float lower_bound = -1.0, float higher_bound = 1.0)
 

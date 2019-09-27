@@ -10,6 +10,7 @@
 
 
 using namespace std;
+using cppgym::gym;
 
 int main()
 {
@@ -28,6 +29,7 @@ int main()
 
       env->step(1);
       env->step(2);
+      //env->render();
 
       return 0;
 

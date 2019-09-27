@@ -7,6 +7,7 @@
 using std::max;
 using std::min;
 using std::cout;
+using namespace cppgym;
 
 MountainCar::MountainCar()
         {

@@ -7,32 +7,35 @@
 using Eigen::VectorXf;
 using Eigen::Vector2f;
 
-class MountainCar : public Env_Helper<int> //integer action space, inherit from that
-
+namespace cppgym
 {
+    class MountainCar : public Env_Helper<int> //integer action space, inherit from that
 
-	protected:
+    {
 
-		float min_position;
-		float max_position;
-		float max_speed;
-		float goal_position;
+        protected:
 
-	public:
+            float min_position;
+            float max_position;
+            float max_speed;
+            float goal_position;
 
-		MountainCar();
-		VectorXf get_state();
+        public:
 
-        VectorXf reset() override;
-        std::tuple<VectorXf,float,bool,std::string> step(const int action) override;
+            MountainCar();
+            VectorXf get_state();
 
-		Vector2f state;
+            VectorXf reset() override;
+            std::tuple<VectorXf,float,bool,std::string> step(const int action) override;
 
-//        Discrete action_space;
-//        Box observation_space;
+            Vector2f state;
+
+    //        Discrete action_space;
+    //        Box observation_space;
 
 
-};
+    };
+}
 
 
 

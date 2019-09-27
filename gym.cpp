@@ -2,6 +2,7 @@
 #include <iostream>
 #include <stdexcept>
 
+using namespace cppgym;
 template<typename T>
 std::unique_ptr<Env> createInstance() { return std::unique_ptr<Env>(new T);}
 

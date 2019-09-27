@@ -5,15 +5,18 @@
 using Eigen::VectorXf;
 
 
-//abstract shape class
-template <class U>
-class Space
+namespace cppgym
 {
+    //abstract shape class
+    template <class U>
+    class Space
+    {
 
-    public:
+        public:
 
-    int shape;
+        int shape;
 
-    virtual U sample() const =0;
+        virtual U sample() const =0;
 
-};
+    };
+}

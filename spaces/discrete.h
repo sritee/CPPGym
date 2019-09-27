@@ -4,14 +4,17 @@
 #include <Eigen/Core>
 #include <iostream>
 
-class Discrete : public Space<int>
+namespace cppgym
 {
-    public:
+    class Discrete : public Space<int>
+    {
+        public:
 
-    int n;
+        int n;
 
-    Discrete(int num_values);
+        Discrete(int num_values);
 
-    int sample() const override;
+        int sample() const override;
 
-};
+    };
+}
