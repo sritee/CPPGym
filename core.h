@@ -4,6 +4,7 @@
 #include <stdexcept>
 #include <Eigen/Core>
 #include <string>
+#include "exceptions.h"
 #include "spaces/space.h"
 
 class Env
@@ -11,19 +12,20 @@ class Env
 {
 	public:
 
-        //returns state, reward, done, info. Overloading all possible types.
-        virtual std::tuple<Eigen::VectorXf,float,bool,std::string> step(const int) {throw std::runtime_error("Not implemented, are you passing correct action type?");}
-        virtual std::tuple<Eigen::VectorXf,float,bool,std::string> step(const Eigen::VectorXf) {throw std::runtime_error("Not implemented, are you passing correct action type?");}
+        //returns state, reward, done, info. Overloading all possible action types.
+        virtual std::tuple<Eigen::VectorXf,float,bool,std::string> step(const int) {throw gym_exception::NotImplementedError();}
+        virtual std::tuple<Eigen::VectorXf,float,bool,std::string> step(const Eigen::VectorXf) {throw gym_exception::NotImplementedError();}
 
         //resets the environment
 		virtual Eigen::VectorXf reset()=0;
 
+        virtual void render(){throw gym_exception::NotImplementedError();} //if called without implementation
+
         virtual ~Env(){} //virtual destructor to delete through base pointer
 
 
-        //TODO - Rendering
-		//virtual void close()=0;
-		//virtual void render()=0;
+
+        //virtual void close()=0;
 
 };
 
