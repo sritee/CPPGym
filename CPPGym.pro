@@ -4,19 +4,20 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-    envs/MountainCar.cpp \
-    main.cpp \
-    spaces/box.cpp \
-    spaces/discrete.cpp \
-    gym.cpp
+    gym/envs/MountainCar.cpp \
+    gym/spaces/box.cpp \
+    gym/spaces/discrete.cpp \
+    gym/gym.cpp \
+    gym/main.cpp
 
 HEADERS += \
-    envs/MountainCar.h \
-    core.h \
-    spaces/space.h \
-    spaces/box.h \
-    spaces/discrete.h \
-    env_list.h \
-    gym.h
+    gym/envs/MountainCar.h \
+    gym/spaces/box.h \
+    gym/spaces/discrete.h \
+    gym/spaces/space.h \
+    gym/core.h \
+    gym/env_list.h \
+    gym/exceptions.h \
+    gym/gym.h
 
 INCLUDEPATH += /usr/include/eigen3/

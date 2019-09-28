@@ -1,11 +1,12 @@
 #pragma once
 
-#include <core.h>
+#include <memory>
 #include <string>
 #include <unordered_map>
-#include <memory>
 
-#include "env_list.h"
+
+#include "gym/env_list.h"
+#include "gym/core.h"
 
 namespace cppgym
 {

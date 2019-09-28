@@ -2,7 +2,7 @@
 #pragma once
 
 #include <Eigen/Core>
-#include "core.h" //gym base environment
+#include "gym/core.h" //gym base environment
 
 using Eigen::VectorXf;
 using Eigen::Vector2f;

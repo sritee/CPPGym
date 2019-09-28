@@ -1,12 +1,12 @@
 
-#include "spaces/box.h"
-#include "spaces/discrete.h"
-
+#include <Eigen/Core>
 #include <iostream>
 #include <string>
 #include <tuple>
-#include <Eigen/Core>
-#include "gym.h"
+
+#include "gym/gym.h"
+#include "gym/spaces/box.h"
+#include "gym/spaces/discrete.h"
 
 
 using namespace std;

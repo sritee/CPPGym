@@ -1,9 +1,9 @@
 #pragma once
 
-#include "spaces/space.h"
 #include <Eigen/Core>
 #include <iostream>
 
+#include "gym/spaces/space.h"
 
 using Eigen::VectorXf;
 

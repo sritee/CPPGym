@@ -1,6 +1,7 @@
-#include "gym.h"
 #include <iostream>
 #include <stdexcept>
+
+#include "gym.h"
 
 using namespace cppgym;
 template<typename T>

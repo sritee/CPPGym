@@ -1,11 +1,12 @@
 #pragma once
 
-#include <tuple>
-#include <stdexcept>
 #include <Eigen/Core>
+#include <stdexcept>
 #include <string>
-#include "exceptions.h"
-#include "spaces/space.h"
+#include <tuple>
+
+#include "gym/exceptions.h"
+#include "gym/spaces/space.h"
 
 namespace cppgym
 {

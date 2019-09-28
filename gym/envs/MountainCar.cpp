@@ -1,8 +1,9 @@
 
-#include "envs/MountainCar.h"
-#include "spaces/discrete.cpp"
 #include <string>
 #include <iostream>
+
+#include "gym/envs/MountainCar.h"
+#include "gym/spaces/discrete.h"
 
 using std::max;
 using std::min;

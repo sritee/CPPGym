@@ -1,4 +1,4 @@
-#include "spaces/discrete.h"
+#include "gym/spaces/discrete.h"
 
 using namespace cppgym;
 Discrete::Discrete(int num_values)
@@ -7,7 +7,7 @@ Discrete::Discrete(int num_values)
     n = num_values;
 }
 
-int Discrete::sample() const
+int Discrete::sample() const //TODO - Fix Sampling
 {
     return 2;
 
