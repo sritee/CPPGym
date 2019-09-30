@@ -8,6 +8,7 @@
 using std::max;
 using std::min;
 using std::cout;
+using std::get;
 using namespace cppgym;
 
 MountainCar::MountainCar()
@@ -35,15 +36,16 @@ MountainCar::MountainCar()
     }
 
 
-    std::tuple<VectorXf,float,bool,std::string> MountainCar::step(const int action)
+    std::tuple<VectorXf, float, bool, std::string> MountainCar::step(const gym_action& action)
     {
 
+        assert(action.index()==0 && "Invalid action type, you need to pass integer");
         float x_velocity = state(0);
         float x_pos = state(1);
 
         x_velocity+=cos(3*x_pos)*-0.0025;
 
-        switch(action)
+        switch(get<int>(action))
 
         {
 
@@ -90,7 +92,7 @@ MountainCar::MountainCar()
             state(1) = x_velocity;
             std::string info = "";
 
-            return make_tuple(state,reward,done, info);
+            return make_tuple(state, reward, done, info);
 
     }
 

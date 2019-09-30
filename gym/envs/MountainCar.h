@@ -9,8 +9,7 @@ using Eigen::Vector2f;
 
 namespace cppgym
 {
-    class MountainCar : public Env_Helper<int> //integer action space, inherit from that
-
+    class MountainCar : public Env
     {
 
         protected:
@@ -26,7 +25,7 @@ namespace cppgym
             VectorXf get_state();
 
             VectorXf reset() override;
-            std::tuple<VectorXf,float,bool,std::string> step(const int action) override;
+            std::tuple<VectorXf, float, bool, std::string> step(const gym_action& action) override;
 
             Vector2f state;
 
