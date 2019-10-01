@@ -19,8 +19,8 @@ namespace cppgym
     {
         public:
 
-            //returns state, reward, done, info. Overloading all possible action types.
-            virtual std::tuple<Eigen::VectorXf, float, bool, std::string> step(const gym_action&) {throw gym_exception::NotImplementedError();}
+            //returns state, reward, done, info.
+            virtual std::tuple<Eigen::VectorXf, float, bool, std::string> step(const gym_action&) = 0;
 
             //resets the environment
             virtual Eigen::VectorXf reset()=0;
