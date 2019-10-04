@@ -24,4 +24,4 @@ std::unique_ptr<Env> gym::make(const std::string& env_name)
 
 }
 
-registry gym::environment_list = {{"MountainCar1",&createInstance<MountainCar>}};
+registry gym::environment_list = {{"MountainCar1",&createInstance<MountainCar>},{"ContinuousMountainCar1", &createInstance<ContinuousMountainCar>}};

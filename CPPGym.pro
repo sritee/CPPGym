@@ -8,7 +8,8 @@ SOURCES += \
     gym/spaces/box.cpp \
     gym/spaces/discrete.cpp \
     gym/gym.cpp \
-    gym/main.cpp
+    gym/main.cpp \
+    gym/envs/ContinuousMountaincar.cpp
 
 HEADERS += \
     gym/envs/MountainCar.h \
@@ -18,6 +19,9 @@ HEADERS += \
     gym/core.h \
     gym/env_list.h \
     gym/exceptions.h \
-    gym/gym.h
+    gym/gym.h \
+    gym/envs/ContinuousMountainCar.h
 
 INCLUDEPATH += /usr/include/eigen3/
+
+DISTFILES +=
