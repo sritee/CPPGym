@@ -44,8 +44,6 @@ std::tuple<VectorXf, float, bool, std::string> ContinuousMountainCar::step(const
     float x_velocity = state(0);
     float x_pos = state(1);
 
-    x_velocity+=cos(3*x_pos)*-0.0025;
-
     float force = get<Eigen::VectorXf>(action)(0); //just need to get the element
 
     x_velocity = x_velocity + force*power - 0.0025 * cos(3*x_pos);
