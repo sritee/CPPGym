@@ -1,27 +1,22 @@
-
 #include <Eigen/Core>
-#include <iostream>
 #include <string>
 #include <tuple>
 
 #include "gym/gym.h"
-#include "gym/spaces/box.h"
-#include "gym/spaces/discrete.h"
-
-
-using namespace std;
-using namespace cppgym;
 
 int main()
 {
+  Eigen::VectorXf state;
+  float reward;
+  bool done;
+  std::string info;
 
-      auto env = gym::make("MountainCar1");
+  auto env = cppgym::gym::make("MountainCar1"); //env is a unique_ptr to a gym environment
+  state = env->reset(); //call reset before simulating
 
-      env->reset();
-
-      env->step(1);
-      env->step(2);
-
-      return 0;
-
+  for(int i = 0; i < 10; ++i)
+  {
+    std::tie(state, reward, done, info) = env->step(0); //unpack tuple
+  }
+  return 0;
 }
