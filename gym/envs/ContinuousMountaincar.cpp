@@ -11,22 +11,13 @@ using std::cout;
 using std::get;
 using namespace cppgym;
 
-ContinuousMountainCar::ContinuousMountainCar()
-{
-    min_position = -1.2;
-    max_position =  0.5;
-    max_speed    =  0.07;
-    goal_position=  0.5;
-    power = 0.0015;
-
-}
+ContinuousMountainCar::ContinuousMountainCar(){}
 
 VectorXf ContinuousMountainCar::reset()
 {
     state <<0,0;
     cout<<"Continuous Mountain Car initialized";
     return state;
-
 }
 
 
@@ -69,5 +60,3 @@ std::tuple<VectorXf, float, bool, std::string> ContinuousMountainCar::step(const
 
     return make_tuple(state, reward, done, info);
 }
-
-
